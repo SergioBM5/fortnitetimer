@@ -88,7 +88,7 @@ function App() {
 
             {/* Countdown Timer */}
             {!timeLeft.expired ? (
-              <div className="gaming-card border-2 border-cyan-500/60 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl backdrop-blur-sm mb-10 glow-effect">
+              <div className="gaming-card border-2 border-cyan-500/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 xl:p-12 shadow-2xl backdrop-blur-sm mb-10 glow-effect">
                 <div className="shimmer-line"></div>
 
                 <div className="text-center mb-6 sm:mb-8">
@@ -101,7 +101,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 relative z-10">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-3 md:gap-3 lg:gap-4 xl:gap-6 relative z-10 max-w-2xl mx-auto xl:max-w-full">
                   {[
                     { label: 'DÍAS', key: 'days', color: 'from-cyan-500 to-blue-500', icon: '📅' },
                     { label: 'HORAS', key: 'hours', color: 'from-blue-500 to-purple-500', icon: '⏰' },
@@ -113,7 +113,7 @@ function App() {
                         <div className="bg-gradient-to-br from-gray-900/95 to-gray-950/95 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 border border-gray-700/50 group-hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2">
                           <div className="text-center">
                             <div className="text-xl sm:text-2xl md:text-3xl mb-1 sm:mb-2">{item.icon}</div>
-                            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-2 sm:mb-3 bg-gradient-to-br bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }}>
+                            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-7xl font-black mb-2 sm:mb-3 bg-gradient-to-br bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }}>
                               <div className={`bg-gradient-to-br ${item.color} bg-clip-text text-transparent`}>
                                 {String(timeLeft[item.key as keyof TimeLeft] || 0).padStart(2, '0')}
                               </div>
