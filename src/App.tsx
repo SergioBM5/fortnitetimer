@@ -52,14 +52,14 @@ function App() {
       </div>
 
       {/* Top Ad Banner */}
-      <div className="relative w-full bg-gradient-to-b from-gray-900/80 to-transparent border-b border-cyan-500/30 py-3 backdrop-blur-sm z-40">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="relative w-full bg-gradient-to-b from-gray-900/80 to-transparent border-b border-cyan-500/30 py-2 sm:py-3 backdrop-blur-sm z-40">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4">
           <AdBanner slotId="4330765893" format="horizontal" />
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-6">
+      <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-12 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
           {/* Sidebar Ad - Desktop */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-20">
@@ -70,38 +70,38 @@ function App() {
           {/* Main Content */}
           <main className="flex-1">
             {/* Header */}
-            <header className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-6 float">
+            <header className="text-center mb-8 sm:mb-10 md:mb-12">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 float">
                 <div className="relative">
-                  <Gamepad2 className="w-16 h-16 text-cyan-400 pulse-glow-text" />
+                  <Gamepad2 className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-cyan-400 pulse-glow-text flex-shrink-0" />
                 </div>
-                <h1 className="text-5xl md:text-7xl font-black cyber-pulse-text tracking-wider">
+                <h1 className="text-3xl sm:text-5xl md:text-7xl font-black cyber-pulse-text tracking-wider">
                   FORTNITE
                 </h1>
               </div>
-              <p className="text-lg md:text-2xl text-cyan-300 flex items-center justify-center gap-2 mb-2">
-                <Timer className="w-6 h-6 animate-spin" style={{ animationDuration: '3s' }} />
+              <p className="text-base sm:text-lg md:text-2xl text-cyan-300 flex items-center justify-center gap-1 sm:gap-2 mb-1 sm:mb-2 flex-wrap">
+                <Timer className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 animate-spin flex-shrink-0" style={{ animationDuration: '3s' }} />
                 CUENTA REGRESIVA
               </p>
-              <p className="text-sm md:text-base text-gray-400 font-light">Fin de Temporada en Tiempo Real</p>
+              <p className="text-xs sm:text-sm text-gray-400 font-light">Fin de Temporada en Tiempo Real</p>
             </header>
 
             {/* Countdown Timer */}
             {!timeLeft.expired ? (
-              <div className="gaming-card border-2 border-cyan-500/60 rounded-2xl p-8 md:p-12 shadow-2xl backdrop-blur-sm mb-10 glow-effect">
+              <div className="gaming-card border-2 border-cyan-500/60 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl backdrop-blur-sm mb-10 glow-effect">
                 <div className="shimmer-line"></div>
 
-                <div className="text-center mb-8">
-                  <div className="flex items-center justify-center gap-2 mb-3">
-                    <Calendar className="w-6 h-6 text-blue-400 animate-bounce" />
-                    <p className="text-lg md:text-xl text-cyan-300 font-semibold">La temporada termina el:</p>
+                <div className="text-center mb-6 sm:mb-8">
+                  <div className="flex items-center justify-center gap-2 mb-2 sm:mb-3 flex-wrap">
+                    <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 animate-bounce flex-shrink-0" />
+                    <p className="text-sm sm:text-lg md:text-xl text-cyan-300 font-semibold">La temporada termina el:</p>
                   </div>
-                  <p className="text-3xl md:text-4xl font-black text-cyan-400 neon-text">
+                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-cyan-400 neon-text break-words">
                     28 de Noviembre, 2025
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 relative z-10">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 relative z-10">
                   {[
                     { label: 'DÍAS', key: 'days', color: 'from-cyan-500 to-blue-500', icon: '📅' },
                     { label: 'HORAS', key: 'hours', color: 'from-blue-500 to-purple-500', icon: '⏰' },
@@ -109,37 +109,37 @@ function App() {
                     { label: 'SEGUNDOS', key: 'seconds', color: 'from-pink-500 to-red-500', icon: '⚡' },
                   ].map((item) => (
                     <div key={item.label} className="relative group perspective">
-                      <div className={`relative bg-gradient-to-br ${item.color} p-0.5 rounded-2xl`}>
-                        <div className="bg-gradient-to-br from-gray-900/95 to-gray-950/95 rounded-2xl p-6 border border-gray-700/50 group-hover:border-cyan-400/50 transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-2">
+                      <div className={`relative bg-gradient-to-br ${item.color} p-0.5 rounded-lg sm:rounded-xl md:rounded-2xl`}>
+                        <div className="bg-gradient-to-br from-gray-900/95 to-gray-950/95 rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 border border-gray-700/50 group-hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2">
                           <div className="text-center">
-                            <div className="text-3xl mb-2">{item.icon}</div>
-                            <div className="text-6xl md:text-7xl font-black mb-3 bg-gradient-to-br bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }}>
+                            <div className="text-xl sm:text-2xl md:text-3xl mb-1 sm:mb-2">{item.icon}</div>
+                            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-2 sm:mb-3 bg-gradient-to-br bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }}>
                               <div className={`bg-gradient-to-br ${item.color} bg-clip-text text-transparent`}>
                                 {String(timeLeft[item.key as keyof TimeLeft] || 0).padStart(2, '0')}
                               </div>
                             </div>
-                            <div className="text-xs md:text-sm font-bold text-gray-400 tracking-widest">
+                            <div className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-400 tracking-widest">
                               {item.label}
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-30 rounded-2xl blur-2xl transition-opacity duration-300`}></div>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-30 rounded-lg sm:rounded-xl md:rounded-2xl blur-2xl transition-opacity duration-300`}></div>
                     </div>
                   ))}
                 </div>
               </div>
             ) : (
-              <div className="gaming-card border-2 border-yellow-500/60 rounded-2xl p-12 shadow-2xl backdrop-blur-sm mb-10 glow-effect text-center bg-gradient-to-br from-yellow-900/30 to-red-900/30">
-                <h2 className="text-5xl md:text-7xl font-black mb-6 cyber-pulse-text">
+              <div className="gaming-card border-2 border-yellow-500/60 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl backdrop-blur-sm mb-10 glow-effect text-center bg-gradient-to-br from-yellow-900/30 to-red-900/30">
+                <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 cyber-pulse-text">
                   ¡TEMPORADA TERMINADA!
                 </h2>
-                <p className="text-xl text-gray-300 mb-8">La nueva temporada está disponible</p>
+                <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">La nueva temporada está disponible</p>
                 <a
                   href="https://www.fortnite.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-black py-4 px-10 rounded-lg transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-yellow-500/50 text-lg"
+                  className="inline-block bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-black py-3 sm:py-4 px-6 sm:px-10 rounded-lg transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-yellow-500/50 text-sm sm:text-lg"
                 >
                   ¡ ACCEDER AHORA !
                 </a>
