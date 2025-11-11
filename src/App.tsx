@@ -54,7 +54,7 @@ function App() {
       {/* Top Ad Banner */}
       <div className="relative w-full bg-gradient-to-b from-gray-900/80 to-transparent border-b border-cyan-500/30 py-3 backdrop-blur-sm z-40">
         <div className="max-w-7xl mx-auto px-4">
-          <AdBanner slotId="1234567890" format="horizontal" />
+          <AdBanner slotId="4330765893" format="horizontal" />
         </div>
       </div>
 
