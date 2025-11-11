@@ -9,7 +9,11 @@ export function AdBanner({ slotId, format = 'horizontal' }: AdBannerProps) {
   useEffect(() => {
     // Cargar los anuncios de AdSense
     if (window.adsbygoogle) {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.warn('AdSense no disponible o sitio en proceso de aprobación:', e);
+      }
     }
   }, [slotId]);
 

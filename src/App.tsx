@@ -63,7 +63,7 @@ function App() {
           {/* Sidebar Ad - Desktop */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-20">
-              <AdBanner slotId="0987654321" format="vertical" />
+              <AdBanner slotId="4330765893" format="vertical" />
             </div>
           </aside>
 
@@ -147,13 +147,13 @@ function App() {
             )}
 
             {/* Bottom Ad */}
-            <AdBanner slotId="5555555555" format="horizontal" />
+            <AdBanner slotId="4330765893" format="horizontal" />
           </main>
 
           {/* Sidebar Ad - Desktop Right */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-20">
-              <AdBanner slotId="1111111111" format="vertical" />
+              <AdBanner slotId="4330765893" format="vertical" />
             </div>
           </aside>
         </div>
